@@ -47,10 +47,11 @@ handicap
 // [19, 5, 42, 2, 77]
 // Go through the array and find the two lowest, then add together
 
-let numbers = [19, 5, 42, 2, 77, 1, 8, 10, 321]
+let numbers = [19, 5, 42, 2, 77]
 
 const sumTwoSmallestNumbers = (numbers) => {
-    return numbers.sort((a, b) => a - b);
+    const [firstNumber, secondNumber] = numbers.sort((a, b) => a - b);
+    return firstNumber + secondNumber;
 }
 
 console.log(sumTwoSmallestNumbers(numbers));
