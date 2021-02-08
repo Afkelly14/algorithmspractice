@@ -24,16 +24,33 @@ handicap
     // figure out if inputs are greater than above information
     // map over information
 
-let data = [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+// let data = [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
 
-const openOrSenior = (data) => {
-   return data.map((info) => {
-    if(info[0] >= 55 && info[1] > 7) {
-        return "Senior"
-    } else {
-        return "Open"
-    }
-    }
-    )}
+// const openOrSenior = (data) => {
+//    return data.map((info) => {
+//     if(info[0] >= 55 && info[1] > 7) {
+//         return "Senior"
+//     } else {
+//         return "Open"
+//     }
+//     }
+//     )}
 
-openOrSenior();
+// openOrSenior();
+
+
+
+
+// Create a function that returns the sum of the two lowest positive numbers
+// given an array of minimum 4 positive integers. 
+
+// [19, 5, 42, 2, 77]
+// Go through the array and find the two lowest, then add together
+
+let numbers = [19, 5, 42, 2, 77, 1, 8, 10, 321]
+
+const sumTwoSmallestNumbers = (numbers) => {
+    return numbers.sort((a, b) => a - b);
+}
+
+console.log(sumTwoSmallestNumbers(numbers));
