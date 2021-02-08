@@ -68,10 +68,28 @@ handicap
 //alphabetPosition("The sunset sets at twelve o'clock")
 //split the array into each letter, map over the letters
 
-const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split("");
+// const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split("");
 
-const alphabetPosition = (text) => {
-    return text.toLowerCase().replace(/[^a-zA-Z]/g, '').split("").map((letter) => alphabet.indexOf(letter) + 1);
+// const alphabetPosition = (text) => {
+//     return text.toLowerCase().replace(/[^a-zA-Z]/g, '').split("").map((letter) => alphabet.indexOf(letter) + 1);
+// }
+
+// console.log(alphabetPosition("The sunset sets at twelve o'clock"));
+
+
+
+/*
+Return the number(count) of vowels in the given string
+*/
+
+function getCount(str) {
+    let vowelsCount = 0;
+
+    for (const letter of str) {
+        if (letter.match(/[aeiou]/g)) {
+            vowelsCount++;
+        }
+    }
+    return vowelsCount;
 }
-
-console.log(alphabetPosition("The sunset sets at twelve o'clock"));
+console.log(getCount("abracadabra"));
