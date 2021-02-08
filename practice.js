@@ -47,11 +47,31 @@ handicap
 // [19, 5, 42, 2, 77]
 // Go through the array and find the two lowest, then add together
 
-let numbers = [19, 5, 42, 2, 77]
+// let numbers = [19, 5, 42, 2, 77]
 
-const sumTwoSmallestNumbers = (numbers) => {
-    const [firstNumber, secondNumber] = numbers.sort((a, b) => a - b);
-    return firstNumber + secondNumber;
+// const sumTwoSmallestNumbers = (numbers) => {
+//     const [firstNumber, secondNumber] = numbers.sort((a, b) => a - b);
+//     return firstNumber + secondNumber;
+// }
+
+// console.log(sumTwoSmallestNumbers(numbers));
+
+
+
+// given a string, replace every letter with its position in the alphabet
+// a = 1
+/*
+ 1. take the alphabet, map it to numbers
+ a b c d e f g h i j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+*/
+//alphabetPosition("The sunset sets at twelve o'clock")
+//split the array into each letter, map over the letters
+
+const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split("");
+
+const alphabetPosition = (text) => {
+    return text.toLowerCase().replace(/[^a-zA-Z]/g, '').split("").map((letter) => alphabet.indexOf(letter) + 1);
 }
 
-console.log(sumTwoSmallestNumbers(numbers));
+console.log(alphabetPosition("The sunset sets at twelve o'clock"));
