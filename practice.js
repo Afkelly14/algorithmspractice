@@ -93,3 +93,36 @@ function getCount(str) {
     return vowelsCount;
 }
 console.log(getCount("abracadabra"));
+
+
+
+/*
+given a string, reverse it
+*/
+
+/*
+convert to an array, reverse it, turn it back into a string
+*/
+const revString = (str) => {
+    const arr = str.split("");
+    arr.reverse();
+    str = arr.join("");
+    console.log(str);
+}
+
+revString("apple");
+
+
+/*
+find palindromes
+*/
+
+/* reverse the string, check if original string & reverse match
+*/
+
+let Palindrome = (str) => {
+    let isPalindrome = str.split("").reverse().join("");
+    console.log(str===isPalindrome);
+}
+
+Palindrome("jhudnlkmd");
