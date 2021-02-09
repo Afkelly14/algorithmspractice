@@ -126,3 +126,34 @@ let Palindrome = (str) => {
 }
 
 Palindrome("jhudnlkmd");
+
+
+/* find the character that appears the most and how many times it appears
+*/
+
+/*
+Notes:
+key- value pair. Create an object, check if whats in the object is in the string
+increase the value if its exists
+Loop through the object
+*/
+
+let maxChar = (str) => {
+    let obj = {};
+
+    for(let char of str) 
+        (!obj[char]) ? obj[char]=1 : obj[char]++;
+
+    let maxNum = 0;
+    let maximumChar = '';
+
+    for(let char in obj) {
+        if(obj[char] >= maxNum) {
+            maxNum = obj[char];
+            maximumChar = char;
+        }
+    }
+    console.log(`${maximumChar} appears ${maxNum} times`)
+}
+
+maxChar("heLLLoo$$3p");
